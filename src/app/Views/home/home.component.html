@@ -1,0 +1,227 @@
+<div class="flex flex-col mt-20 bg-cover bg-bottom " style="background-image: url(assets/img/homepic.png)" >
+    <div class="flex justify-center mt-40 z-10 w-full gap-8 p-4 text-2xl">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-4">
+            <i class="pi pi-map-marker text-rose-500 "></i>
+            <input type="text" class="outline-none w-64 h-16">  
+        </div>
+        
+    <div class="text-search bg-white px-4 py-1 rounded-lg">Postition</div>
+        <div class="rounded-lg bg-white px-4 py-1 shadow-md">Postition</div>
+        <div class="primary-button flex items-center justify-center px-4 py-1 w-16 h-16 !rounded-md">
+            <i class="pi pi-search"></i>
+        </div>
+    </div>
+    <div class="mt-20 flex flex-col p-4 z-10">
+        <div class="w-2/5  text-white text-7xl font-bold leading-snug ">YOU DON’T KNOW
+            WHERE TO GO?
+            PERFECT!</div>
+    </div>
+    <div class=" p-8 z-10">
+        <button class="primary-button"> Let's Go</button>
+    </div>
+</div>
+
+
+<div class="py-40 px-20  ">
+    <p-carousel [value]="themes" [autoplayInterval]="6000" [circular]="true" [numVisible]="4" [numScroll]="1">
+        
+        <ng-template let-theme pTemplate="item">
+            <div
+            [style]="'background-image:url('+ theme.image +')'"
+            [class]="theme.id % 2 == 0 ? 'mt-28' : 'mb-28'"
+            class="mx-10 rounded-xl flex h-[600px] items-center justify-center bg-black p-4 text-white text-3xl font-bold bg-cover">
+                {{theme.title}}
+            </div>
+        </ng-template>
+        
+    </p-carousel>
+    <div>
+    <p class=" py-40 text-2xl text-center"> Discover the sheduled experiences</p>
+</div>
+    
+</div>  
+
+<div class="px-20 flex flex-wrap  ">
+        
+       
+    <div 
+    [style]="'background-image:url('+ image2 +')'"
+    class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] items-center justify-center bg-black p-4 text-white text-3xl font-bold bg-cover"> 
+        Cathage Festival
+    </div> 
+    <div 
+    [style]="'background-image:url('+ image3 +')'"
+    class=" basis1 mx-10 rounded-xl flex  items-center justify-center bg-black p-4 text-white text-3xl font-bold bg-cover"> 
+       The Electric Dunes
+    </div> 
+    <br>
+    
+      
+
+              
+    </div>
+    <div class="py-20 px-20 flex flex-wrap  ">
+        
+       
+        <div 
+    class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] 
+    items-center justify-between   text-black font-bold bg-cover"> 
+    <div class="flex flex-col ">
+        <div class="flex flex-col text-2xl">
+        <div >Explore every corner 
+            <br>      
+        of the country<br>with us !</div>
+      </div>
+      <div class="text-rose-500 text-3xl text-left "> Discover how it works !</div>
+      
+
+    </div>
+    </div> 
+    <div 
+    [style]="'background-image:url('+ image6 +')'"
+    class=" basis1 mx-10 rounded-xl flex  items-center justify-center  text-3xl font-bold bg-cover"> 
+    <div class=" flex flex-col gap-4 ">
+        <button class="basis1 mx-10 rounded-xl flex  items-center justify-center bg-white p-4 text-rose-500 text-3xl font-bold bg-cover " >Discover</button>
+    </div>
+    </div> 
+
+ 
+          
+    
+                  
+        </div>
+        <div>
+            <p class=" py-40 text-2xl text-center"> Become a service provider</p>
+        </div>
+        
+
+        <div class="px-20 flex flex-wrap  ">
+        
+       
+            <div 
+            [style]="'background-image:url('+ image4 +')'"
+            class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] items-center justify-center bg-black p-4 text-white text-3xl font-bold bg-cover"> 
+            Become a Host
+            </div> 
+            <div 
+            [style]="'background-image:url('+ image5 +')'"
+            class=" basis1 mx-10 rounded-xl flex  items-center justify-center bg-black p-4 text-white text-3xl font-bold bg-cover"> 
+            Become a Merchant
+            </div> 
+        
+            </div> 
+            <div>
+                <p class=" py-40 text-2xl text-center"> Why book with LIVMO ?</p>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4 items-center text-center">
+                <div 
+                class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] 
+                items-center justify-between font-bold bg-cover"> 
+                <div class="flex flex-col ">
+                            <div class="flex flex-col text-center items-center ">
+                            <div class="basis1">
+                              <img 
+                               src="assets/img/1.png" width="57.89px">    </div>
+                            <div class=" text-3xl " > Total Flexibility
+                           </div>
+                    <div  >of the country <br>with us !</div>
+                  </div> 
+            
+               
+              
+                </div>  
+            </div>
+            <div 
+            class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] 
+            items-center justify-between font-bold bg-cover"> 
+            <div class="flex flex-col ">
+                        <div class="flex flex-col text-center items-center ">
+                        <div class="basis1">
+                          <img 
+                           src="assets/img/2.png" width="57.89px">    </div>
+                        <div class=" text-3xl " > Unforgettable 
+                            Experiences
+                       </div>
+                <div  > <p> Discover and book tours and <br>activities so great that you'll want <br>to tell everyone about it.</p></div>
+                
+              </div> 
+        
+           
+          
+            </div>  
+            </div>
+            <div 
+            class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] 
+            items-center justify-between font-bold bg-cover"> 
+            <div class="flex flex-col ">
+                        <div class="flex flex-col text-center items-center ">
+                        <div class="basis1">
+                          <img 
+                           src="assets/img/3.png" width="57.89px">    </div>
+                        <div class=" text-3xl " > Quality First
+                       </div>
+                <div  > <p>High quality standards. Millions <br> reviews.</p></div>
+                
+              </div> 
+        
+           
+          
+            </div>  
+            </div>
+            <div 
+            class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] 
+            items-center justify-between font-bold bg-cover"> 
+            <div class="flex flex-col ">
+                        <div class="flex flex-col text-center items-center ">
+                        <div class="basis1">
+                          <img 
+                           src="assets/img/4.png" width="57.89px">    </div>
+                        <div class=" text-3xl " > Award-Winning <br>
+                            Customer Service
+                       </div>
+                <div  > <p>A new price ? A new program ?<br> No problem.<br>
+                    We are at your disposal, 24/7</p></div>
+                
+              </div> 
+        
+           
+          
+            </div>  
+            </div>
+
+            
+            
+        </div>
+        <div leftmargin="50px"class=" py-40 text-2xl text-center">
+            <h2 ><span>FOLLOW US #LIVMO</span></h2>
+        </div>
+        <div class="py-20 px-20  ">
+            <p-carousel [value]="themes" [autoplayInterval]="6000" [circular]="true" [numVisible]="4" [numScroll]="1" [span]="false">
+                
+                <ng-template let-theme pTemplate="item">
+                    <div
+                    [style]="'background-image:url('+ theme.image +')'"
+                    [class]="theme.id % 2 == 0 ? 'mt-28' : 'mb-28'"
+                    class="mx-10 rounded-xl flex h-[400px] w-[400px] items-center justify-center bg-black p-4 text-white text-3xl font-bold bg-cover">
+                       
+                    </div>
+                </ng-template>
+                
+            </p-carousel>
+       
+           
+        </div>
+               
+
+           
+        
+           
+           
+            
+         
+        
+
+
+   
+<app-nav-menu></app-nav-menu>
