@@ -21,6 +21,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CalendarModule} from 'primeng/calendar';
 import { RouterModule } from '@angular/router';
+import { ExperiencesComponent } from './Views/experiences/experiences.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { RouterModule } from '@angular/router';
     NavMenuComponent,
     HomeComponent,
     FooterComponent,
+    ExperiencesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),

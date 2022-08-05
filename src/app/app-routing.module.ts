@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ExperiencesComponent } from './Views/experiences/experiences.component';
 import { HomeComponent } from './Views/home/home.component';
 import { UsersDashbaordComponent } from './Views/home/users-dashbaord/users-dashbaord.component';
 
@@ -12,6 +13,7 @@ const routes: Routes = [
     data: { title: "Users" },
   },
   // If route does not exist : Home => Not found component
+  { path: "exp", component: ExperiencesComponent },
   { path: "**", component: HomeComponent },
 
 ];
