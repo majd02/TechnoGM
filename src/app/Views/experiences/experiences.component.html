@@ -1,38 +1,133 @@
 <p>experiences works!</p>
 <div class="px-20 flex flex-wrap  ">
-<div 
-class="basis1 mx-10 rounded-xl flex h-[436px] w-[805px] 
-items-center justify-between   text-black font-bold bg-cover"> 
 
-<div class="flex">
-  
-  <button id="multiLevelDropdownButton" data-dropdown-toggle="dropdown" 
-  class="text-black bg-white:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-  <div class="flex flex-row ...">
-    <div><img src="assets/img/WhereSearch.png"></div>
-    <div> </div>
-    <div> </div>
-  </div>
-  Where</button>
-  <!-- Dropdown menu -->
-  <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-      <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="multiLevelDropdownButton">
-        <li>
-          <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-        </li>
-        <li>
-          <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex justify-between items-center py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>Dropdown</button>
-            <div id="doubleDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                <li>
-                  <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Overview</a>
-                </li>
-               
-              </ul>
-          </div>
-        </li>
+
+
+
+         
         
-      </ul>
+  <div class="py-40    ">
+    <div class="grid grid-cols-5 gap-4 px-60">
+    <div class=" mt-2 ">
+      <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+          <img src="assets/img/WhereSearch.png " class="text-rose-500">
+          <p-dropdown [options]="options" [(ngModel)]="selectedCity"  placeholder=" When ? " optionLabel="name"> </p-dropdown>
+    
+      </div>
+    </div>
+    <div class=" mt-2 ">
+      <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+          <img src="assets/img/date.png " class="text-rose-500">
+          <p-calendar   placeholder="When?"
+              [showButtonBar]="true" inputId="buttonbar" formControlName="date"
+              [readonlyInput]="true"></p-calendar>
+      </div>
+    </div>
+    <div class=" mt-2 ">
+      <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+          <img src="assets/img/PeopleSearch.png " class="text-rose-500">
+          <p-dropdown [options]="people" [(ngModel)]="selectedCity"  placeholder="  People? " optionLabel="name">  </p-dropdown>
+    
+      </div>
+    </div>
+    <div class=" mt-2 ">
+          <img src="assets/img/rec.png " class="text-rose-500">
+    
+    </div>
+    
+    <div class=" mt-2   ">
+      <img src="assets/img/srch.png " class="text-rose-500">
+    
     </div>
   </div>
-</div>
+     
+    
+    
+    
+    
+     
+      
+    
+    
+     
+     
+    
+    
+      <div class="grid grid-cols-5 gap-4 ">
+      <div class=" mt-2 ">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+            <img src="assets/img/v.png " class="text-rose-500">
+            <p-dropdown [options]="theme" [(ngModel)]="selectedCity"  placeholder=" theme ? " optionLabel="name"> </p-dropdown>
+      
+        </div>
+      </div>
+      <div class=" mt-2 ">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+          <img src="assets/img/v.png " class="text-rose-500">
+            <p-dropdown [options]="subtheme" [(ngModel)]="selectedCity"  placeholder="  sub-theme? " optionLabel="name">  </p-dropdown>
+      
+        </div>
+      </div>
+      <div class=" mt-2 ">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+            <img src="assets/img/v.png " class="text-rose-500">
+            <p-dropdown [options]="" [(ngModel)]="selectedCity"  placeholder="  season? " optionLabel="name">  </p-dropdown>
+      
+        </div>
+      </div>
+      <div class=" mt-2 ">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+            <img src="assets/img/v.png " class="text-rose-500">
+            <p-dropdown [options]="options" [(ngModel)]="selectedCity"  placeholder="  price? " optionLabel="name">  </p-dropdown>
+      
+        </div>
+      </div>
+      <div class=" mt-2 ">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
+            <img src="assets/img/v.png " class="text-rose-500">
+            <p-dropdown [options]="City" [(ngModel)]="selectedCity"  placeholder="  City? " optionLabel="name">  </p-dropdown>
+      
+        </div>
+      </div>
+     
+    </div>
+      
+    
+          <div class="max-w-sm bg-white h-[436px] w-[436px]  rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="rounded-lg h-[436px] w-[436px]" src="/assets/img/a.png" alt="" />
+           
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-5 text-rose-500"> 
+                Rtiba Forest Hiking
+                <div
+                class="flex flex-row border-l border-rose-500  cursor-pointer text-black hover:bg-rose-50 
+                 items-center w-full px-4 py-2 mt-2 text-xl font-bold text-left md:w-auto md:inline md:mt-0 md:ml-4 font-thin ">
+                 Rtiba, Tunisia
+              </div>
+              <div class="p-5 text-black"> 
+                 
+               nature 
+                <div
+                class="flex flex-row  border-rose-500   text-black 
+                 items-center w-full px-4 py-2 mt-2 text-xl font-bold text-center md:w-auto md:inline md:mt-0 md:ml-4 ">
+             100dt
+              </div>
+          </div>
+        </div>
+       
+        
+      </div>
+
+
+
+  
+  
+  
+        <!-- ... -->
+      
+
+
+      
+
+    
