@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DropdownModule} from 'primeng/dropdown';
-
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
+import {ConfirmationService} from 'primeng/api';
 interface City {
   name: string,
   code: string
@@ -11,7 +12,15 @@ interface City {
   styleUrls: ['./experiences.component.css']
 })
 export class ExperiencesComponent implements OnInit {
+  display: boolean = false;
 
+  showDialog() {
+    this.display = true;
+}
+rangeValues:number[];
+close() {
+  this.display = false;
+}
   options: City[];
   people : any[];
   theme :any[];

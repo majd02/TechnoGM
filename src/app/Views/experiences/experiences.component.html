@@ -77,9 +77,14 @@
       </div>
       <div class=" mt-2 ">
         <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-1">
-            <img src="assets/img/v.png " class="text-rose-500">
-            <p-dropdown [options]="options" [(ngModel)]="selectedCity"  placeholder="  price? " optionLabel="name">  </p-dropdown>
+          
+        <p-dialog header="Price" [(visible)]="display"><p-slider [(ngModel)]="rangeValues" [min]="0" [max]="100"></p-slider>
+          <button (click)="close()" > gg</button>
+      </p-dialog>
       
+      <button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">   <img src="assets/img/v.png " class="text-rose-500">
+        
+      </button>
         </div>
       </div>
       <div class=" mt-2 ">
