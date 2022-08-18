@@ -22,6 +22,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CalendarModule} from 'primeng/calendar';
 import { RouterModule } from '@angular/router';
 import { ExperiencesComponent } from './Views/experiences/experiences.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ExpdetailsComponent } from './Views/expdetails/expdetails.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { ExperiencesComponent } from './Views/experiences/experiences.component'
     HomeComponent,
     FooterComponent,
     ExperiencesComponent,
+    ExpdetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
@@ -49,7 +52,8 @@ import { ExperiencesComponent } from './Views/experiences/experiences.component'
     ButtonModule,
     CalendarModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   providers: [
     //  { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
