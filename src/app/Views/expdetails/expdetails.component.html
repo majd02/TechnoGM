@@ -1,5 +1,5 @@
 <div class="py-40 px-20  ">
-    <p-carousel [value]="themes" [autoplayInterval]="6000" [circular]="true" [numVisible]="1" [numScroll]="1">
+    <p-carousel [value]="themes" [autoplayInterval]="3000" [circular]="true" [numVisible]="1" [numScroll]="1">
      
         <ng-template let-theme pTemplate="item">
          
@@ -13,90 +13,408 @@
                
             </div>
 
-            <div class=" grid grid-cols-3 gap-4 px-10  text-center " >
-                 
-                <div class=" mt-2 ">
-                    <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
-                     font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
-                     focus:ring-opacity-75"> 
-                     
-               Theme  <div> : {{theme.theme}}</div>
-                </div>
-                </div>
-                    <div class=" mt-2 ">
-                        <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
-                         font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
-                         focus:ring-opacity-75"> 
-                         
-                   SubTheme  <div> : {{theme.subtheme}}</div>
-                    </div>
-                    </div>
-                </div>
+           
             </div>
         </ng-template> 
     </p-carousel> 
     
     <div class="py-20 ">
-
-        <div class=" grid flex-col  text-center py-10" >
+        <div class=" grid grid-cols-3 gap-4 px-10  text-center " >
                  
             <div class=" mt-2 ">
-                <div class="py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+                <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
                  font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
-                 focus:ring-opacity-75">  
-                 <div class="flex flex-col">
-                    <div>
-                        
-                     about the plan
-               
-                </div>
-                
-                <div > ccc </div>
-    
-    
-    
-    
+                 focus:ring-opacity-75"> 
+                 
+           Theme  : theme
             </div>
-        </div>
-    </div>
-</div>
+            </div>
+                <div class=" mt-2 ">
+                    <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
+                     font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+                     focus:ring-opacity-75"> 
+                     
+               SubTheme : subtheùe
+                </div>
+                </div>
+            </div>
+           
 </div>
 
+
+<div class="py-20 ">
+<div class="grid grid-cols-5 gap-4">
+                 
+    <div class="col-start-1 col-end-4 ">
+        <div class="py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+         font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+         focus:ring-opacity-75">  
+         <div class="flex flex-col">
+            <div>
+                
+             about the plan
+       
+        </div>
+        
+        <div > <textarea readonly wrap="soft" cols="45">cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc ccccccccccccccccccccccccccccccccc</textarea>  </div>
+
+
+
+
+         </div>
+      </div>
+    </div>
+    
+</div>
+</div>
 
         
-    <div class="py-20 ">
+<div class="py-20 ">
 
-     <div class="px-10 font-semibold text-3xl " >   INLCUDED</div>
-     
-    <div class=" grid grid-cols-6 gap-4 px-10  text-center py-10" >
-                 
-        <div class=" mt-2 ">
-            <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
-             font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
-             focus:ring-opacity-75"> 
-             
-         <div> food</div>
-        </div>
-        </div>
-        <div class=" mt-2 ">
-            <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
-             font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
-             focus:ring-opacity-75"> 
-             transport
-        </div>
-        </div>
-        <div class=" mt-2 ">
-            <div class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
-             font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
-             focus:ring-opacity-75"> 
-             lodging
-        </div>
-        </div>
-        </div>
-    <div> 
-</div>
+    <div class="px-10 font-semibold text-3xl " >   INLCUDED</div>
     
+   <div class=" grid grid-cols-6 px-10   py-10" >
+                
+       <div class=" mt-2 ">
+           <button (click)="showModalDialog()" class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
+            font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+            focus:ring-opacity-75"> 
+            
+        <div> food</div>
+        
+       </button>
+       <p-dialog header="food" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+       [draggable]="false" [resizable]="false">
+       <div class="flex flex-col  ">
+           <div>
+               <div class="grid grid-cols-3 px-10 ">
+                   <div class="text-rose-500 text-xl font-semibold">Dish1 </div>  <div class=" text-xl font-semibold">  ALL SALMON</div>
+               </div>
+           </div>
+           <div>
+                   <div class="text-left text-xl font-semibold px-10 py-7">Dish Description </div>  
+              
+           </div>
+       <div class="grid grid-cols-3 gap-4 px-7">
+           <div> 
+               <textarea readonly rows="5" cols="80" pInputTextarea >Salmon is called an oily fish, mostly due to its high  percentage of good saturated fats. It is a full-flavored fish with a very colorful flesh, ranging from orange to dark red and it has a very distinctive flavor profile.</textarea></div>
+        
+           </div>
+           <div>
+               <div class="text-left text-xl font-semibold px-10 py-7 text-blue-600">Dish photos </div>  
+          
+       </div>
+               <div>
+               <div class="grid grid-cols-2 gap-4 px-7  ">
+       
+      
+                   <div>
+                       <img src="assets/img/dish.png " class="text-rose-500">
+                   </div> 
+                   <div>
+   
+                       <img src="assets/img/dish.png " class="text-rose-500">
+                   </div> 
+                   <br>
+                   
+                     
+               
+                             
+                   </div>
+               </div>
+             
+           </div>
+         
+   </p-dialog>
+       </div>
+       <div class=" mt-2 ">
+        <button (click)="showModalDialog1()" class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
+         font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+         focus:ring-opacity-75"> 
+         
+     <div> transport</div>
+     
+    </button>
+    <p-dialog header="transport" [(visible)]="displayModal1" [modal]="true" [style]="{width: '1060px'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div class="flex flex-col  ">
+        <div> 
+                <div class="text-rose-500 text-xl font-semibold px-7">SEAT IBIZA </div>
+            
+        </div>
+        <div>
+            
+            <div class="grid grid-cols-5 gap-4 px-7  ">
+                <div class="text-left text-xl font-semibold py-7">Number of seats : </div> 
+                
+                <div class="text-left text-xl   py-7">5 </div>  
+           
+                </div>
+        </div>
+        <div>
+            
+            <div class="text-left text-xl font-semibold px-7 ">The GO : </div> 
+            
+    </div>
+    <div>
+        
+        <div class="grid grid-cols-4 gap-4 py-7  ">
+            <div>
+                
+                <div class="grid grid-cols-2 gap-4 px-7  ">
+                  <div class="text-left text-xl font-semibold ">   From: </div>
+      
+                
+          
+          <div class="text-left text-xl  ">Tunis </div>   
+      </div> 
+     
+          </div>
+          <div>
+                
+            <div class="grid grid-cols-2 gap-4 px-7  ">
+              <div class="text-left text-xl font-semibold ">   To: </div>
+  
+            
+      
+      <div class="text-left text-xl  ">Rtiba </div>   
+  </div> 
+ 
+      </div>
+      <div>
+                
+        <div class="grid grid-cols-2 gap-4 px-7  ">
+          <div class="text-left text-xl font-semibold ">   Departure: </div>
+
+        
+  
+  <div class="text-left text-xl  ">10:10 </div>   
 </div> 
+
+  </div>
+  <div>
+                
+    <div class="grid grid-cols-2 gap-4 px-7  ">
+      <div class="text-left text-xl font-semibold ">   Arrival: </div>
+
+    
+
+<div class="text-left text-xl  ">12:00 </div>   
+</div> 
+
+</div>
+          
+        </div>
+     </div>
+     <div>
+            
+        <div class="text-left text-xl font-semibold px-7 ">The Return : </div> 
+        
+</div>
+<div>
+    
+    <div class="grid grid-cols-4 gap-4 py-7  ">
+        <div>
+            
+            <div class="grid grid-cols-2 gap-4 px-7  ">
+              <div class="text-left text-xl font-semibold ">   From: </div>
+  
+            
+      
+      <div class="text-left text-xl  ">Tunis </div>   
+  </div> 
+ 
+      </div>
+      <div>
+            
+        <div class="grid grid-cols-2 gap-4 px-7  ">
+          <div class="text-left text-xl font-semibold ">   To: </div>
+
+        
+  
+  <div class="text-left text-xl  ">Rtiba </div>   
+</div> 
+
+  </div>
+  <div>
+            
+    <div class="grid grid-cols-2 gap-4 px-7  ">
+      <div class="text-left text-xl font-semibold ">   Departure: </div>
+
+    
+
+<div class="text-left text-xl  ">10:10 </div>   
+</div> 
+
+</div>
+<div>
+            
+<div class="grid grid-cols-2 gap-4 px-7  ">
+  <div class="text-left text-xl font-semibold ">   Arrival: </div>
+
+
+
+<div class="text-left text-xl  ">12:00 </div>   
+</div> 
+
+</div>
+      
+    </div>
+ </div>
+        <div> 
+            <div class=" text-xl font-semibold px-7">CAR RULES</div>
+        
+    </div>
+    <div class="grid grid-cols-3 gap-4 px-7">
+        <div> 
+            <textarea readonly rows="5" cols="100" pInputTextarea >Salmon is called an oily fish, mostly due to its high  percentage of good saturated fats. It is a full-flavored fish with a very colorful flesh, ranging from orange to dark red and it has a very distinctive flavor profile.</textarea></div>
+     
+        </div>
+        <div>
+            <div class="text-left text-3xl font-semibold px-10 py-7 text-blue-600">Vehicule photos </div>  
+       
+    </div>
+            <div>
+            <div class="grid grid-cols-2 gap-4 px-7  ">
+    
+   
+                <div>
+                    <img src="assets/img/dish.png " class="text-rose-500">
+                </div> 
+                <div>
+
+                    <img src="assets/img/dish.png " class="text-rose-500">
+                </div> 
+                <br>
+                
+                  
+            
+                          
+                </div>
+            </div>
+          
+        </div>
+      
+</p-dialog>
+    </div>
+    <div class=" mt-2 ">
+        <button (click)="showModalDialog2()" class="py-2 px-4 bg-white border-x-4 text-black text-3xl shadow-md flex border-2 border-gray-200 
+         font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+         focus:ring-opacity-75"> 
+         
+     <div> Lodging</div>
+     
+    </button>
+    <p-dialog header="Lodging" [(visible)]="displayModal2" [modal]="true" [style]="{width: '1060px'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div class="flex flex-col  ">
+        
+        <div>
+            
+            <div class="grid grid-cols-4 gap-2 px-7  ">
+                <div class="text-left text-xl font-semibold py-7">Lodging categorie : </div> 
+                
+                <div class="text-left text-xl   py-7">Hotel</div>  
+           
+                </div>
+        </div>
+          
+        <div>
+            
+            <div class="grid grid-cols-6 gap-4 px-7  ">
+                <div class="text-left text-xl font-semibold py-7">Lodging type : </div> 
+                
+                <div class="text-left text-xl   py-7">full lodging</div>  
+           
+                </div>
+        </div>
+          
+        <div>
+            
+            <div class="grid grid-cols-7 gap-4 px-7  ">
+                <div class="text-left text-xl font-semibold py-7">Adresse : </div> 
+                
+                <div class="text-left text-xl  col-span-3 py-7">14 Rue Rmal, Rtibia 2054, Tunisia</div>  
+           
+                </div>
+        </div>
+      
+    <div>
+        
+        <div class="grid grid-cols-4 gap-4 py-7  ">
+            <div>
+                
+                <div class="grid grid-cols-2 gap-4 px-7  ">
+                  <div class="text-left text-xl font-semibold ">   Start: </div>
+      
+                
+          
+          <div class="text-left text-xl  ">10:00 </div>   
+      </div> 
+     
+          </div>
+          <div>
+                
+            <div class="grid grid-cols-2 gap-4 px-7  ">
+              <div class="text-left text-xl font-semibold ">   End: </div>
+    
+            
+      
+      <div class="text-left text-xl  ">12:00 </div>   
+    </div> 
+    
+      </div>
+     
+    
+          
+        </div>
+     </div>
+    
+    
+        <div> 
+            <div class=" text-xl font-semibold px-7">Logging Description</div>
+        
+    </div>
+    <div class="grid grid-cols-3 gap-4 ">
+        <div> 
+            <textarea readonly rows="5" cols="100" pInputTextarea >Salmon is called an oily fish, mostly due to its high  percentage of good saturated fats. It is a full-flavored fish with a very colorful flesh, ranging from orange to dark red and it has a very distinctive flavor profile.</textarea></div>
+     
+        </div>
+        <div>
+            <div class="text-left text-3xl font-semibold px-10 py-7 text-blue-600">Logging photos </div>  
+       
+    </div>
+            <div>
+            <div class="grid grid-cols-2 gap-4 px-7  ">
+    
+    
+                <div>
+                    <img src="assets/img/dish.png " class="text-rose-500">
+                </div> 
+                <div>
+    
+                    <img src="assets/img/dish.png " class="text-rose-500">
+                </div> 
+                <br>
+                
+                  
+            
+                          
+                </div>
+            </div>
+          
+        </div>
+      
+    </p-dialog>
+    </div>
+      
+      
+       </div>
+   <div> 
+</div>
+   
+</div> 
+
 
 <div class="py-30 ">
 
@@ -124,7 +442,7 @@
            
             </div>
             
-            <div class="text-sm"> ccc </div>
+            <div class="text-sm"> dd </div>
 
 
 
@@ -152,9 +470,52 @@
                    
             </div>
    
+<p-dialog [(visible)]="display" header="food"
+
+[style]="{ width: '70vw' }"
+[baseZIndex]="10000">
+    <div class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+       
+        <div class="flex flex-col  ">
+            <div>
+            <div class="grid grid-cols-5 ">
+                <div class="text-rose-500 text-xl">Dish1 </div> <div> &nbsp;&nbsp;  &nbsp;&nbsp; ALL SALMON</div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-4 px-20">
+            <div>
+                <textarea rows="5" cols="45" pInputTextarea >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.</textarea></div>
+        </div>
+                <div>
+                <div class="grid grid-cols-3 gap-4 px-20  ">
+        
+       
+                    <div>
+                        <img src="assets/img/dish.png " class="text-rose-500">
+                    </div> 
+                    <div>
+
+                        <img src="assets/img/dish.png " class="text-rose-500">
+                    </div> 
+                    <br>
+                    
+                      
+                
+                              
+                    </div>
+                </div>
+              
+            </div>
+      </div>
+</p-dialog>
+
+<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">d</button>
+
     </div>
     
-    <div class="text-sm"> ccc </div>
+    <div class="text-sm">  ccc </div>
+   
 
 
 
@@ -184,7 +545,8 @@
    
     </div>
     
-    <div class="text-sm"> ccc </div>
+    <div class="text-sm"> <textarea rows="5" cols="45" pInputTextarea >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+ magna aliqua.</textarea></div>
 
 
 

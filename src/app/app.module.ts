@@ -25,6 +25,7 @@ import { ExperiencesComponent } from './Views/experiences/experiences.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ExpdetailsComponent } from './Views/expdetails/expdetails.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { ExpdetailsComponent } from './Views/expdetails/expdetails.component';
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
     HttpClientModule,
     FormsModule,
+    
     ReactiveFormsModule,
     CarouselModule,
     RadioButtonModule,
