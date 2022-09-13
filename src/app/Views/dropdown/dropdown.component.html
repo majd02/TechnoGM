@@ -1,0 +1,46 @@
+<p>dropdown works!</p>
+<div class="flex flex-col mt-20 bg-cover bg-bottom " style="background-image: url(assets/img/homepic.png)" >
+    <div class="flex justify-center mt-40 z-10 w-full gap-8 p-4 text-2xl">
+        <div class=" rounded-lg bg-white px-4 py-1 shadow-md flex items-center gap-4">
+            <i class="pi pi-map-marker text-rose-500 "></i>
+            <input type="text" class="outline-none w-64 h-16">  
+        </div>
+        
+    <div class="text-search bg-white px-4 py-1 rounded-lg">Postition</div>
+        <div class="rounded-lg bg-white px-4 py-1 shadow-md">Postition</div>
+        <div class="primary-button flex items-center justify-center px-4 py-1 w-16 h-16 !rounded-md">
+            <i class="pi pi-search"></i>
+        </div>
+    </div>
+    <div class="mt-20 flex flex-col p-4 z-10">
+        <div class="w-2/5  text-white text-7xl font-bold leading-snug ">YOU DON’T KNOW
+            WHERE TO GO?
+            PERFECT!</div>
+    </div>
+    <div class=" p-8 z-10">
+        <button class="primary-button"> Let's Go</button>
+    </div>
+</div>
+
+<div class="py-40 px-20  ">
+
+    <div class=" input-group input-group-sm mb-3">
+        <select  class=" py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+        font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+        focus:ring-opacity-75" [(ngModel)]="SelectedTheme.themeID"
+        (change)="onSelect($event.target)">
+            <option value="0"> theme</option>
+            <option *ngFor="let theme of themes "
+            [value]="theme.themeID" >{{theme.name}}</option>
+        </select>
+    </div>
+    <div >
+        <select class=" py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+        font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+        focus:ring-opacity-75">
+            <option value="0"> subtheme</option>
+            <option *ngFor="let subtheme of subthemes "
+            [value]="subtheme.nom" >{{subtheme.nom}}</option>
+        </select>
+    </div>
+</div>

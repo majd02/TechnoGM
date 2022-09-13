@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {DialogModule} from 'primeng/dialog'; 
 
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { SelectItem } from 'primeng/api';
+import { ThemeService } from 'src/app/services/theme.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { subtheme } from 'src/app/models/subtheme';
+
 @Component({
   selector: 'app-expdetails',
   templateUrl: './expdetails.component.html',
@@ -8,7 +14,7 @@ import {DialogModule} from 'primeng/dialog';
 })
 export class ExpdetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public themeser:ThemeService , public fb:FormBuilder) { }
   showModalDialog() {
     this.displayModal = true;
 }
@@ -25,7 +31,22 @@ showModalDialog2() {
 
 displayModal2: boolean;
   ngOnInit(): void {
-  }
+    this.dropdownformgroup = this.fb.group({
+      theme:[''],
+      subthemMe:['']
+    })
+   this.themeser.getArtme().subscribe(themelist=>{
+    this.themelist = themelist
+   })
+  } 
+  themelist;
+  countrylist;
+  dropdownformgroup : FormGroup ; 
+ 
+    
+      
+
+ 
   included = [{
     name:'Food'
      
@@ -62,6 +83,29 @@ display: boolean = false;
   }
  
 ]
-
-
+cities: SelectItem[];
+selectedState: string;
+ 
+stateNames = ['Alabama', 'Alaska', 'California'];
+states = this.stateNames.map((val, i, stateNames) => {
+    return { label: val, value: val }
+});  
+cityNames = [
+  {state: 'Alabama', city: 'Birmingham'}, 
+  {state: 'Alabama', city: 'Huntsville'}, 
+  {state: 'Alabama', city: 'Montgomery'},
+  {state: 'Alaska', city: 'Anchorage'}, 
+  {state: 'Alaska', city: 'Juneau'},
+  {state: 'California', city: 'Fresno'},
+  {state: 'California', city: 'Perris'}
+];
+getCities(state):any[] {
+  this.cities = this.cityNames
+                    .filter((el) => { return el.state === state })
+                    .map((el) => { return { label: el.city, value: el.city } });return this.cities;
+}  
 }
+
+ 
+ 
+

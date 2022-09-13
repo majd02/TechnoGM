@@ -54,8 +54,16 @@
                 
              about the plan
        
-        </div>
-        
+        </div> 
+        <p-dropdown [formGroup]="dropdownformgroup"   [style]="{'width':'150px'}" >
+           </p-dropdown>
+        <p-dropdown [options]="cities" [style]="{'width':'150px'}"></p-dropdown>
+        <form>
+        <select formControlName="theme">
+            <option></option>
+            <option [value]="theme.id"  *ngFor = "let theme in themelist">   {{theme.name}}  </option>
+        </select>
+    </form>
         <div > <textarea readonly wrap="soft" cols="45">cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc ccccccccccccccccccccccccccccccccc</textarea>  </div>
 
 

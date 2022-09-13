@@ -24,6 +24,8 @@ import { RouterModule } from '@angular/router';
 import { ExperiencesComponent } from './Views/experiences/experiences.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ExpdetailsComponent } from './Views/expdetails/expdetails.component';
+import { DropdownComponent } from './Views/dropdown/dropdown.component';
+import { LoginComponent } from './Views/login/login.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { ExpdetailsComponent } from './Views/expdetails/expdetails.component';
     FooterComponent,
     ExperiencesComponent,
     ExpdetailsComponent,
+    DropdownComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
