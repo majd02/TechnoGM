@@ -14,6 +14,6 @@ export class ThemeService {
     return this.http.get<String>("http://localhost:40361/api/Theme/");
   } 
     public getsub(id:number):Observable<String>{
-    return this.http.get<String>("http://localhost:40361/api/Subtheme/GetStateById/"+id);
+    return this.http.get<String>("http://localhost:40361/api/Subtheme/GetsubthemesById/"+id);
   }
 }
